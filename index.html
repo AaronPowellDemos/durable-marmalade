@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Durable Marmalade test</title>
+  </head>
+
+  <body>
+    <button id="start">Start!</button>
+
+    <script>
+      (() => {
+        const btn = document.getElementById("start");
+
+        btn.addEventListener("click", async () => {
+          const res = await fetch("/.api/start/helloOrchestrator");
+          const json = await res.json();
+
+          console.log(json);
+        });
+      })();
+    </script>
+  </body>
+</html>

@@ -5,11 +5,8 @@
       "name": "req",
       "type": "httpTrigger",
       "direction": "in",
-      "route": "orchestrators/{functionName}",
-      "methods": [
-        "post",
-        "get"
-      ]
+      "route": "start/{functionName}",
+      "methods": ["post", "get"]
     },
     {
       "name": "$return",
